@@ -4,26 +4,19 @@ import java.math.BigDecimal;
 
 class Room {
     private String name;
-    private BigDecimal minimumRate;
+    private BigDecimal weekendRate;
+    private BigDecimal weekdayRate;
 
     Room() {
         this.name = "";
-        this.minimumRate = BigDecimal.valueOf(150);
+        this.weekendRate = BigDecimal.valueOf(150);
+        this.weekdayRate = BigDecimal.valueOf(150);
     }
 
     Room(String name) {
         this.name = name;
-        this.minimumRate = BigDecimal.valueOf(150);
-    }
-
-    Room(String name, BigDecimal minimumRate) {
-        this.name = name;
-        this.minimumRate = minimumRate;
-    }
-
-    Room(String name, double minimumRate) {
-        this.name = name;
-        this.minimumRate = BigDecimal.valueOf(minimumRate);
+        this.weekendRate = BigDecimal.valueOf(150);
+        this.weekdayRate = BigDecimal.valueOf(150);
     }
 
     public String toString() {
@@ -34,15 +27,19 @@ class Room {
         this.name = name;
     }
 
-    BigDecimal getMinimumRate() {
-        return minimumRate;
+    public BigDecimal getWeekendRate() {
+        return weekendRate;
     }
 
-    void setMinimumRate(BigDecimal minimumRate) {
-        this.minimumRate = minimumRate;
+    public void setWeekendRate(BigDecimal weekendRate) {
+        this.weekendRate = weekendRate;
     }
 
-    void setMinimumRate(double minimumRate) {
-        this.minimumRate = BigDecimal.valueOf(minimumRate);
+    public BigDecimal getWeekdayRate() {
+        return weekdayRate;
+    }
+
+    public void setWeekdayRate(BigDecimal weekdayRate) {
+        this.weekdayRate = weekdayRate;
     }
 }

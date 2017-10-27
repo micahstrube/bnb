@@ -6,6 +6,26 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class GuestTest {
     @Test
+    void guestConstructor() {
+        Guest guest = new Guest();
+        assertEquals("", guest.getFirstName());
+        assertEquals("", guest.getLastName());
+        assertEquals("000-000-0000", guest.getPhoneNumber());
+        assertEquals("0000-0000-0000-0000", guest.getCreditCardNumber());
+        assertEquals("00/00", guest.getCreditCardExpiration());
+    }
+
+    @Test
+    void guestConstructorFirstNameLastName() {
+        Guest guest = new Guest("first", "last");
+        assertEquals("first", guest.getFirstName());
+        assertEquals("last", guest.getLastName());
+        assertEquals("000-000-0000", guest.getPhoneNumber());
+        assertEquals("0000-0000-0000-0000", guest.getCreditCardNumber());
+        assertEquals("00/00", guest.getCreditCardExpiration());
+    }
+
+    @Test
     void getLastName() {
         Guest guest = new Guest("first", "last");
         assertEquals("last", guest.getLastName());

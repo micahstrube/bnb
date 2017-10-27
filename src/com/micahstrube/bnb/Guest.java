@@ -1,13 +1,13 @@
 package com.micahstrube.bnb;
 
-public class Guest {
+class Guest {
     private String lastName;
     private String firstName;
     private String phoneNumber;
     private String creditCardNumber;
     private String creditCardExpiration;
 
-    public Guest() {
+    Guest() {
         this.firstName = "";
         this.lastName = "";
         this.phoneNumber = "000-000-0000";
@@ -15,7 +15,7 @@ public class Guest {
         this.creditCardExpiration = "00/00";
     }
 
-    public Guest(String firstName, String lastName) {
+    Guest(String firstName, String lastName) {
         this.lastName = lastName;
         this.firstName = firstName;
         this.phoneNumber = "000-000-0000";
@@ -23,43 +23,43 @@ public class Guest {
         this.creditCardExpiration = "00/00";
     }
 
-    public String getLastName() {
+    String getLastName() {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
+    void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
-    public String getFirstName() {
+    String getFirstName() {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
+    void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
-    public String getPhoneNumber() {
+    String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
+    void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
-    public String getCreditCardNumber() {
+    String getCreditCardNumber() {
         return creditCardNumber;
     }
 
-    public void setCreditCardNumber(String creditCardNumber) {
+    void setCreditCardNumber(String creditCardNumber) {
         this.creditCardNumber = creditCardNumber;
     }
 
-    public String getCreditCardExpiration() {
+    String getCreditCardExpiration() {
         return creditCardExpiration;
     }
 
-    public void setCreditCardExpiration(String creditCardExpiration) {
+    void setCreditCardExpiration(String creditCardExpiration) {
         this.creditCardExpiration = creditCardExpiration;
     }
 }

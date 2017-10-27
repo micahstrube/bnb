@@ -2,26 +2,26 @@ package com.micahstrube.bnb;
 
 import java.math.BigDecimal;
 
-public class Room {
+class Room {
     private String name;
     private BigDecimal minimumRate;
 
-    public Room() {
+    Room() {
         this.name = "";
         this.minimumRate = BigDecimal.valueOf(150);
     }
 
-    public Room(String name) {
+    Room(String name) {
         this.name = name;
         this.minimumRate = BigDecimal.valueOf(150);
     }
 
-    public Room(String name, BigDecimal minimumRate) {
+    Room(String name, BigDecimal minimumRate) {
         this.name = name;
         this.minimumRate = minimumRate;
     }
 
-    public Room(String name, double minimumRate) {
+    Room(String name, double minimumRate) {
         this.name = name;
         this.minimumRate = BigDecimal.valueOf(minimumRate);
     }
@@ -30,19 +30,19 @@ public class Room {
         return this.name;
     }
 
-    public void setName(String name) {
+    void setName(String name) {
         this.name = name;
     }
 
-    public BigDecimal getMinimumRate() {
+    BigDecimal getMinimumRate() {
         return minimumRate;
     }
 
-    public void setMinimumRate(BigDecimal minimumRate) {
+    void setMinimumRate(BigDecimal minimumRate) {
         this.minimumRate = minimumRate;
     }
 
-    public void setMinimumRate(double minimumRate) {
+    void setMinimumRate(double minimumRate) {
         this.minimumRate = BigDecimal.valueOf(minimumRate);
     }
 }

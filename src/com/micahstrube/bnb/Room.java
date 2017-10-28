@@ -27,19 +27,19 @@ class Room {
         this.name = name;
     }
 
-    public BigDecimal getWeekendRate() {
+    BigDecimal getWeekendRate() {
         return weekendRate;
     }
 
-    public void setWeekendRate(BigDecimal weekendRate) {
+    void setWeekendRate(BigDecimal weekendRate) {
         this.weekendRate = weekendRate;
     }
 
-    public BigDecimal getWeekdayRate() {
+    BigDecimal getWeekdayRate() {
         return weekdayRate;
     }
 
-    public void setWeekdayRate(BigDecimal weekdayRate) {
+    void setWeekdayRate(BigDecimal weekdayRate) {
         this.weekdayRate = weekdayRate;
     }
 }

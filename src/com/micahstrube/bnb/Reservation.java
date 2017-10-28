@@ -1,19 +1,36 @@
 package com.micahstrube.bnb;
 
 import java.math.BigDecimal;
-import java.util.Date;
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 class Reservation {
     private Room room;
-    private Date startDate;
-    private Date endDate;
-    private Date bookedDate;
+    private LocalDate startDate;
+    private LocalDate endDate;
+    private LocalDate bookedDate;
+    private LocalDate balanceDueDate;
     private BigDecimal balance;
-    private Date balanceDueDate;
     private boolean canceled;
 
     Reservation() {
         canceled = false;
+    }
+
+    List<BigDecimal> calculateCharges() {
+        List<BigDecimal> charges = new ArrayList<>();
+
+        startDate.datesUntil(endDate).forEach((LocalDate d) -> {
+            if (d.getDayOfWeek() == DayOfWeek.FRIDAY || d.getDayOfWeek() == DayOfWeek.SATURDAY) {
+                charges.add(room.getWeekendRate());
+            } else {
+                charges.add(room.getWeekdayRate());
+            }
+        });
+
+        return charges;
     }
 
     Room getRoom() {
@@ -24,28 +41,36 @@ class Reservation {
         this.room = room;
     }
 
-    Date getStartDate() {
+    LocalDate getStartDate() {
         return startDate;
     }
 
-    void setStartDate(Date startDate) {
+    void setStartDate(LocalDate startDate) {
         this.startDate = startDate;
     }
 
-    Date getEndDate() {
+    LocalDate getEndDate() {
         return endDate;
     }
 
-    void setEndDate(Date endDate) {
+    void setEndDate(LocalDate endDate) {
         this.endDate = endDate;
     }
 
-    Date getBookedDate() {
+    LocalDate getBookedDate() {
         return bookedDate;
     }
 
-    void setBookedDate(Date bookedDate) {
+    void setBookedDate(LocalDate bookedDate) {
         this.bookedDate = bookedDate;
+    }
+
+    LocalDate getBalanceDueDate() {
+        return balanceDueDate;
+    }
+
+    void setBalanceDueDate(LocalDate balanceDueDate) {
+        this.balanceDueDate = balanceDueDate;
     }
 
     BigDecimal getBalance() {
@@ -54,14 +79,6 @@ class Reservation {
 
     void setBalance(BigDecimal balance) {
         this.balance = balance;
-    }
-
-    Date getBalanceDueDate() {
-        return balanceDueDate;
-    }
-
-    void setBalanceDueDate(Date balanceDueDate) {
-        this.balanceDueDate = balanceDueDate;
     }
 
     boolean isCanceled() {

@@ -1,4 +1,4 @@
-package com.micahstrube.bnb;
+package com.micahstrube.bnb.model;
 
 class Guest {
     private String lastName;
@@ -6,6 +6,7 @@ class Guest {
     private String phoneNumber;
     private String creditCardNumber;
     private String creditCardExpiration;
+    private Reservation reservation;
 
     Guest() {
         this.firstName = "";
@@ -61,5 +62,13 @@ class Guest {
 
     void setCreditCardExpiration(String creditCardExpiration) {
         this.creditCardExpiration = creditCardExpiration;
+    }
+
+    public Reservation getReservation() {
+        return reservation;
+    }
+
+    public void setReservation(Reservation reservation) {
+        this.reservation = reservation;
     }
 }

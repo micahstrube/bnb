@@ -1,4 +1,4 @@
-package com.micahstrube.bnb;
+package com.micahstrube.bnb.model;
 
 import org.junit.jupiter.api.Test;
 

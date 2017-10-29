@@ -1,4 +1,4 @@
-package com.micahstrube.bnb;
+package com.micahstrube.bnb.model;
 
 import java.math.BigDecimal;
 import java.time.DayOfWeek;

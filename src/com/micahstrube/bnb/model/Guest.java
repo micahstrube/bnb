@@ -65,7 +65,7 @@ class Guest {
     }
 
     public Reservation getReservation() {
-        return reservation;
+        return this.reservation;
     }
 
     public void setReservation(Reservation reservation) {

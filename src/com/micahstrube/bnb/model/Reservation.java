@@ -22,14 +22,15 @@ class Reservation {
     List<BigDecimal> calculateCharges() {
         List<BigDecimal> charges = new ArrayList<>();
 
-        startDate.datesUntil(endDate).forEach((LocalDate d) -> {
+        System.out.println(startDate.compareTo(endDate));
+/*        startDate.datesUntil(endDate).forEach((LocalDate d) -> {
             if (d.getDayOfWeek() == DayOfWeek.FRIDAY || d.getDayOfWeek() == DayOfWeek.SATURDAY) {
                 charges.add(room.getWeekendRate());
             } else {
                 charges.add(room.getWeekdayRate());
             }
         });
-
+*/
         return charges;
     }
 

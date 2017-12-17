@@ -1,4 +1,4 @@
-module bnb {
+/* module bnb {
     requires javafx.base;
     requires javafx.graphics;
     requires javafx.controls;
@@ -6,4 +6,4 @@ module bnb {
     requires org.junit.jupiter.api;
     requires java.sql;
     exports com.micahstrube.bnb;
-}
+}*/
